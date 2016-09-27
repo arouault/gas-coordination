@@ -24,7 +24,7 @@
           %i.green.circle.checkmark.icon
           Goals for this phase
     .row
-      - category.goals.each do |goal|
+      - (category.goals || []).each do |goal|
         .five.wide.column
           = goal
 
@@ -38,7 +38,7 @@
       .sixteen.wide.column
         %h3 Action Steps
         .ui.fluid.accordion#action-steps
-          - category.action_steps.each.with_index(1) do |step, index|
+          - (category.action_steps || []).each.with_index(1) do |step, index|
             .title
               %h4= "#{index}. #{step}"
             .content
@@ -63,7 +63,7 @@
     .sixteen.wide.column
       .ui.tertiary.inverted.olive.segment
         %h5 Tools for this phase
-        - category.tools.each do |tool|
+        - (category.tools || []).each do |tool|
           %p= tool.description
           %p
             %a{href: "#{tool.link.url}"}= tool.link.text
