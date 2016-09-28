@@ -57,7 +57,7 @@ helpers do
   end
 
   def step_markdown(*path_segments)
-    filepath = step_file(path_segments)
+    filepath = content_file(path_segments)
     markdown File.read(filepath)
   rescue Errno::ENOENT => e
     if ENV.fetch('RESCUE_MISSING_FILES', true).to_b
@@ -67,9 +67,16 @@ helpers do
     end
   end
 
-  def step_file(*path_segments)
+  def content_file(*path_segments, ext: '.md')
     segments = path_segments.flatten.map { |s| s.to_s.downcase.parameterize.underscore }
-    File.join(Dir.pwd, 'source', segments) << '.md'
+    File.join(Dir.pwd, 'source', segments) << ext
+  end
+
+  def render_story_file(title)
+    filename = title.to_s.downcase.parameterize
+    path = File.join(Dir.pwd, 'source', 'story', 'content', "#{filename}.html.haml")
+    contents = File.exists?(path) ? File.read(path) : '%h1 Missing content!'
+    Haml::Engine.new(contents).render
   end
 
   def path_to(resource_name, resource_or_param, param_name: nil)
