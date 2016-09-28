@@ -39,24 +39,28 @@
         %h3 Action Steps
         .ui.fluid.accordion#action-steps
           - (category.action_steps || []).each.with_index(1) do |step, index|
+            - path_info = [:categories, :content, category.name, step]
             .title
               %h4= "#{index}. #{step}"
             .content
               .ui.basic.text.segment
                 -# prepare_to_shop/check_your_credit
-                = step_markdown :categories, :content, category.name, step
-        .ui.tertiary.gray.text.segment
-          %p
-            Visit our
-            %a{href: '#'} sources page
-            to learn more about the facts and numbers we reference.
+                = step_markdown path_info
+                - if ENV['RACK_ENV'] == 'development'
+                  %a{ href: "file://#{step_file(path_info)}" }
+                    Open source file
+        -# .ui.tertiary.gray.text.segment
+        -#   %p
+        -#     Visit our
+        -#     %a{href: '#'} sources page
+        -#     to learn more about the facts and numbers we reference.
 
-          %p
-            Note: The process and forms described on this page reflect
-            %a{href: '#'} new mortgage regulations
-            that take effect for
-            %a{href: '#'} most mortgages
-            on October 3, 2015.
+        -#   %p
+        -#     Note: The process and forms described on this page reflect
+        -#     %a{href: '#'} new mortgage regulations
+        -#     that take effect for
+        -#     %a{href: '#'} most mortgages
+        -#     on October 3, 2015.
 
 .six.wide.column
   .ui.grid

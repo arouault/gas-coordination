@@ -1,50 +1,84 @@
 -
-  name: Prepare to shop
+  name: Communicate effectively
   id: 1
   narrative: >
-    Buying a home is exciting. It’s also one of the most important financial
-    decisions you’ll make. Choosing a mortgage to pay for your new home is
-    just as important. Don’t rush into it. Before you start shopping for a
-    home and a mortgage, take time to prepare. You’ll be in a better position
-    to make great choices if you first check your credit, assess your
-    finances, set your home-price budget, and decide for yourself whether
-    it’s the right time to buy.
-  image: /images/calculator.png
+    Gas company representatives who interact with the municipal staff serve a
+    critical role in conveying information back and forth between the two
+    organizations. Having good relationships in place allows both parties to
+    build trust, understand the needs and rules of the other party, and improve
+    communication&ndash;all of which can make the planning and execution of paving
+    and gas main work more efficient.
   goals:
-    - Determine how much you want to spend on a home.
-    - Decide if it's the right time to buy a new home.
-    - Gather your application paperwork.
+    - Build trust and understanding between municipalities and utilities.
+    - Clarify policies with residents desiring new gas service.
   action_steps:
-    - Check your credit
-    - Assess your spending
-    - Budget for new or changed expenses
-    - Determine your down payment
-    - Decide how much you want to spend on a home
-    - Consider whether it's the right time for you to buy
-    - Build a network of advisors
-    - Create a loan application packet
-  tools:
-    -
-      description: >
-        The interest rate you expect is an important factor in deciding how
-        much to spend on a home.
-      link:
-        text: Explore interest rates
-        url: '#'
-    -
-      description: >
-        Our step-by-step worksheet helps you look at your expenses and calculate
-        how much you can afford for a total monthly home payment.
-      link:
-        text: Monthly payment worksheet
-        url: '#'
-
+    - Provide access to contacts and records
+    - Minimize conflicts with residents
 -
-  name: Explore loan choices
+  name: Coordinate work
   id: 2
 -
-  name: Compare loan offers
+  name: Share data
   id: 3
 -
-  name: Get ready to close
+  name: Reorganize systems
   id: 4
+  narrative: >
+    Many of the improvements we can make to improve coordination and save costs
+    during paving and gas line repair are short-term, meaning they can be done
+    during or shortly before the construction season. Some, however, require
+    a more significant investment.
+
+    Our basic premise is this: we cannot succesfully repair 400% of the normal
+    amount of gas line with the systems we use presently. In order to make our
+    plan work and repair our aging infrastructure, we must structure our work
+    in a way that significantly increases our capacity.
+  goals:
+    - Stabilize working relationships betweeen municipalities and utilities.
+    - Improve work systems to meet the challenge.
+    - Improve internal processes of municipalities and utilities.
+  action_steps:
+    - Assess capacity to reduce staff turnover
+    - Improve staff transition process
+    - Incorporate GIS
+    - Resolve tense relationships
+# -
+#   name: Prepare to shop
+#   id: 99
+#   narrative: >
+#     Buying a home is exciting. It’s also one of the most important financial
+#     decisions you’ll make. Choosing a mortgage to pay for your new home is
+#     just as important. Don’t rush into it. Before you start shopping for a
+#     home and a mortgage, take time to prepare. You’ll be in a better position
+#     to make great choices if you first check your credit, assess your
+#     finances, set your home-price budget, and decide for yourself whether
+#     it’s the right time to buy.
+#   image: /images/calculator.png
+#   goals:
+#     - Determine how much you want to spend on a home.
+#     - Decide if it's the right time to buy a new home.
+#     - Gather your application paperwork.
+#   action_steps:
+#     - Check your credit
+#     - Assess your spending
+#     - Budget for new or changed expenses
+#     - Determine your down payment
+#     - Decide how much you want to spend on a home
+#     - Consider whether it's the right time for you to buy
+#     - Build a network of advisors
+#     - Create a loan application packet
+#   tools:
+#     -
+#       description: >
+#         The interest rate you expect is an important factor in deciding how
+#         much to spend on a home.
+#       link:
+#         text: Explore interest rates
+#         url: '#'
+#     -
+#       description: >
+#         Our step-by-step worksheet helps you look at your expenses and calculate
+#         how much you can afford for a total monthly home payment.
+#       link:
+#         text: Monthly payment worksheet
+#         url: '#'
