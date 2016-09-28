@@ -20,3 +20,5 @@ gem 'activesupport'
 gem 'redcarpet'
 gem 'wannabe_bool'
 gem 'dotenv'
+
+gem 'middleman-gh-pages'
