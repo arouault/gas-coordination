@@ -130,6 +130,7 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport
+  dotenv
   middleman (>= 4.0.0)
   middleman-compass (>= 4.0.0)
   middleman-livereload

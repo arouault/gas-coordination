@@ -1,3 +1,4 @@
+Dotenv.load
 require "active_support/core_ext/string/inflections"
 ###
 # Page options, layouts, aliases and proxies
@@ -56,14 +57,19 @@ helpers do
   end
 
   def step_markdown(*path_segments)
-    segments = path_segments.map { |s| s.to_s.downcase.parameterize.underscore }
-    markdown File.read(File.join(Dir.pwd, 'source', segments) << '.md')
+    filepath = step_file(path_segments)
+    markdown File.read(filepath)
   rescue Errno::ENOENT => e
     if ENV.fetch('RESCUE_MISSING_FILES', true).to_b
-      markdown "> No file found at `source/#{segments.join('/')}.md`"
+      markdown "> No file found at `#{filepath}`"
     else
       raise
     end
+  end
+
+  def step_file(*path_segments)
+    segments = path_segments.flatten.map { |s| s.to_s.downcase.parameterize.underscore }
+    File.join(Dir.pwd, 'source', segments) << '.md'
   end
 
   def path_to(resource_name, resource_or_param, param_name: nil)
