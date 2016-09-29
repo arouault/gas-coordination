@@ -22,3 +22,4 @@ gem 'wannabe_bool'
 gem 'dotenv'
 
 gem 'middleman-gh-pages'
+gem 'middleman-deploy', '~> 1.0'
