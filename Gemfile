@@ -22,4 +22,6 @@ gem 'wannabe_bool'
 gem 'dotenv'
 
 gem 'middleman-gh-pages'
-gem 'middleman-deploy', '~> 1.0'
+gem 'middleman-deploy',
+  git:    'https://github.com/middleman-contrib/middleman-deploy.git',
+  branch: 'master'

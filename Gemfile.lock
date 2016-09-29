@@ -1,3 +1,13 @@
+GIT
+  remote: https://github.com/middleman-contrib/middleman-deploy.git
+  revision: 243ab38b08896cd5a37d6845a01a5761b934a898
+  branch: master
+  specs:
+    middleman-deploy (2.0.0.pre.alpha)
+      middleman-core (>= 3.2)
+      net-sftp
+      ptools
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -88,10 +98,6 @@ GEM
       servolux
       tilt (~> 1.4.1)
       uglifier (~> 3.0)
-    middleman-deploy (1.0.0)
-      middleman-core (>= 3.2)
-      net-sftp
-      ptools
     middleman-gh-pages (0.3.1)
       rake (> 0.9.3)
     middleman-livereload (3.4.6)
@@ -144,7 +150,7 @@ DEPENDENCIES
   dotenv
   middleman (>= 4.0.0)
   middleman-compass (>= 4.0.0)
-  middleman-deploy (~> 1.0)
+  middleman-deploy!
   middleman-gh-pages
   middleman-livereload
   middleman-sprockets (= 4.0.0.rc.1)
