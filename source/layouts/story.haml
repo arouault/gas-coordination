@@ -8,6 +8,6 @@
     = stylesheet_link_tag 'style'
   %body{:class => "#{page_classes}"}
     .ui.container
-      .ui.sixteen.column.stackable.grid
+      .ui.vertically.divided.grid
         = yield
     = javascript_include_tag 'vendor/jquery.min', 'vendor/semantic-ui', 'app'
