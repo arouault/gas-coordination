@@ -19,3 +19,7 @@ Action step content -- that is, the content revealed in each accordion item -- i
 The category name and action step name have both been "parameterized" and "underscored". For example, if your category is called "Prepare to shop" and your action step is "Check your credit", the file will be located at `/source/categories/content/prepare_to_shop/check_your_credit.md`.
 
 The default setting is to render an error message in the accordion if there's no file. If you want it to raise an error, set the environment variable `RESCUE_MISSING_FILES=false`.
+
+#### Story segments
+
+The story segments, and their order, are defined in story.yml. Run `rake generate:story` to generate any missing story files into story/content.

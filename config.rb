@@ -12,7 +12,7 @@ page '/*.json', layout: false
 page '/*.txt', layout: false
 
 # With alternative layout
-page '/', layout: 'story'
+page '/', layout: 'story' # Use story layout for index page
 
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
 data.categories.each do |category|

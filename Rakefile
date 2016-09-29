@@ -22,7 +22,7 @@ namespace :generate do
   end
 
   def starter_content(path)
-    ".row\n  %h1 Find me in #{path}"
+    ".row\n  %h1 Find me in /#{path.partition('source').last(2).join}"
   end
 
 end
