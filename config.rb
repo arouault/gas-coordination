@@ -72,8 +72,8 @@ helpers do
     File.join(Dir.pwd, 'source', segments) << ext
   end
 
-  def render_story_file(title)
-    filename = title.to_s.downcase.parameterize
+  def render_haml(title, operations: [:to_s, :downcase, :parameterize])
+    filename = operations.inject(title) { |result, method| result.send(method) }
     path = File.join(Dir.pwd, 'source', 'story', 'content', "#{filename}.html.haml")
     contents = File.exists?(path) ? File.read(path) : '%h1 Missing content!'
     Haml::Engine.new(contents).render

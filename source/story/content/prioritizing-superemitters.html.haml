@@ -1,13 +1,21 @@
-.row
-  .eight.wide.column
-    %img.ui.fluid.image{src: 'http://d.tile.stamen.com/terrain/9/154/189.png'}
-  .eight.wide.column
-    %p
-      Lock the door, Artoo. All right, check that side of the street. It's secure. I don't know what all the trouble is about, but I'm sure it must be your fault. You watch your language!
-    %p
-      %img.ui.medium.image{src: 'http://www.r-graph-gallery.com/wp-content/uploads/2016/02/107_Basic_scatterplot_with_plotly.png'}
-    %p
-      The battle station is heavily shielded and carries a firepower greater than half the star fleet. A small one-man fighter should be able to penetrate the outer defense. Pardon me for asking, sir, but what good are snub fighters going to be against that?
-
-
-
+%section#contact.main.style3.secondary
+  .content.container
+    %header
+      %h2 Say Hello.
+      %p Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
+    .box.container{:class => "75%"}
+      / Contact Form
+      %form{:action => "#", :method => "post"}
+        .row{:class => "50%"}
+          .6u{:class => "12u(mobile)"}
+            %input{:name => "name", :placeholder => "Name", :type => "text"}/
+          .6u{:class => "12u(mobile)"}
+            %input{:name => "email", :placeholder => "Email", :type => "email"}/
+        .row{:class => "50%"}
+          .12u
+            %textarea{:name => "message", :placeholder => "Message", :rows => "6"}
+        .row
+          .12u
+            %ul.actions
+              %li
+                %input{:type => "submit", :value => "Send Message"}/

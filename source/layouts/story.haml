@@ -11,9 +11,9 @@
     = stylesheet_link_tag 'story'
 
   %body{:class => "#{page_classes}"}
-    -# .ui.container
-    -#   .ui.vertically.divided.grid
+    = partial 'header'
     = yield
+    = partial 'footer'
 
     - js_files = %w( vendor/jquery.min vendor/html5up app )
     = javascript_include_tag *js_files
