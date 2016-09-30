@@ -76,17 +76,7 @@
       var on = function() {
 
         // Generic sections.
-        // TODO: Generify this even more.
-        $('.main.style1').scrollex({
-          mode: 'middle',
-          delay: 100,
-          initialize: function() { $(this).addClass('inactive');    },
-          terminate:  function() { $(this).removeClass('inactive'); },
-          enter:      function() { $(this).removeClass('inactive'); },
-          leave:      function() { $(this).addClass('inactive');    }
-        });
-
-        $('.main.style2').scrollex({
+        $('.main.style1, .main.style2').scrollex({
           mode: 'middle',
           delay: 100,
           initialize: function() { $(this).addClass('inactive');    },
@@ -96,7 +86,7 @@
         });
 
         // Work.
-        $('#work').scrollex({
+        $('.inner-images').scrollex({
           top:    '40vh',
           bottom: '30vh',
           delay:   50,
@@ -141,7 +131,7 @@
         });
 
         // Contact.
-        $('#contact')
+        $('.from-bottom')
           .scrollex({
             top:    '50%',
             delay:    50,
@@ -153,13 +143,10 @@
         };
 
         var off = function() {
-          // Generic sections.
-          $('.main.style1').unscrollex();
-          $('.main.style2').unscrollex();
-          // Work.
-          $('#work').unscrollex();
-          // Contact.
-          $('#contact').unscrollex();
+          $('.main.style1',
+            '.main.style2',
+            '.inner-images',
+            '.from-bottom').unscrollex();
         };
 
         skel.on('change', function() {
