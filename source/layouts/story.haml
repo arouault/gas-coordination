@@ -4,10 +4,21 @@
     %meta{:charset => "utf-8"}/
     %meta{:content => "ie=edge", "http-equiv" => "x-ua-compatible"}/
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
-    %title= current_page.data.title || "Middleman Semantic UI"
-    = stylesheet_link_tag 'style'
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+
+    %title= current_page.data.title || "Gas"
+
+    = stylesheet_link_tag 'story'
+
   %body{:class => "#{page_classes}"}
-    .ui.container
-      .ui.vertically.divided.grid
-        = yield
-    = javascript_include_tag 'vendor/jquery.min', 'vendor/semantic-ui', 'app'
+    -# .ui.container
+    -#   .ui.vertically.divided.grid
+    = yield
+
+    - js_files = %w( vendor/jquery.min vendor/html5up app )
+    = javascript_include_tag *js_files
+    = javascript_include_tag "https://use.typekit.net/rqi7oqq.js"
+    /[if lte IE 8] <script src="assets/js/ie/respond.min.js"></script>
+
+    :javascript
+      try{Typekit.load({ async: true });}catch(e){}

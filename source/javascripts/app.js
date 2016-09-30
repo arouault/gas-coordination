@@ -1,7 +1,7 @@
 $(document)
   .ready(function() {
 
-    $('.ui.accordion').accordion();
+    // $('.ui.accordion').accordion();
 
   })
 ;
